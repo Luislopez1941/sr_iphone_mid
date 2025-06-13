@@ -1,0 +1,281 @@
+/* Header Styles - Futuristic Design */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(10, 15, 25, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header.scrolled {
+  background: rgba(2, 6, 14, 0.95);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 32px rgba(59, 130, 246, 0.1);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logoIcon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  opacity: 0.3;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.logoIconSvg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.logoText {
+  background: linear-gradient(135deg, #ffffff, #94a3b8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Navigation */
+.nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Call Button */
+.callButton {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.callButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1e40af, #3730a3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.callButton:hover::before {
+  opacity: 1;
+}
+
+.callButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.callIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.callText {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile Menu */
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.mobileMenuButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(2, 6, 14, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNav {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileNavLink {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 16px;
+  text-align: left;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: white;
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateX(8px);
+}
+
+.mobileCallButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobileCallButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+
+  .callButton {
+    display: flex;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+    height: 80px;
+  }
+
+  .nav {
+    gap: 40px;
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+}

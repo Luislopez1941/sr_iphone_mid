@@ -1,0 +1,326 @@
+/* Location Section Styles */
+.section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: rgb(31, 41, 55);
+  margin-bottom: 16px;
+}
+
+.titleHighlight {
+  color: rgb(234, 88, 12);
+}
+
+.description {
+  font-size: 20px;
+  color: rgb(75, 85, 99);
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+.mapContainer {
+  position: relative;
+}
+
+.mapPlaceholder {
+  background-color: rgb(229, 231, 235);
+  border-radius: 8px;
+  height: 384px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mapIcon {
+  width: 64px;
+  height: 64px;
+  color: rgb(156, 163, 175);
+  margin-bottom: 16px;
+}
+
+.mapTitle {
+  color: rgb(107, 114, 128);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.mapSubtitle {
+  color: rgb(156, 163, 175);
+  font-size: 14px;
+}
+
+.addressOverlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.addressContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.addressIcon {
+  width: 20px;
+  height: 20px;
+  color: rgb(234, 88, 12);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.addressInfo {
+  flex: 1;
+}
+
+.addressTitle {
+  font-weight: 600;
+  color: rgb(31, 41, 55);
+  margin-bottom: 4px;
+}
+
+.addressText {
+  color: rgb(75, 85, 99);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.locationInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.cardHeader {
+  padding: 24px 24px 0 24px;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(31, 41, 55);
+  margin: 0;
+}
+
+.cardIcon {
+  width: 20px;
+  height: 20px;
+  color: rgb(234, 88, 12);
+}
+
+.cardContent {
+  padding: 24px;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hoursItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(243, 244, 246);
+}
+
+.hoursItem:last-child {
+  border-bottom: none;
+}
+
+.hoursDay {
+  font-weight: 500;
+  color: rgb(55, 65, 81);
+}
+
+.hoursTime {
+  color: rgb(22, 163, 74);
+  border: 1px solid rgb(187, 247, 208);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.statusBadge {
+  background-color: rgb(220, 252, 231);
+  color: rgb(22, 101, 52);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactDescription {
+  color: rgb(75, 85, 99);
+  margin: 0 0 8px 0;
+}
+
+.contactButton {
+  width: 100%;
+  justify-content: center;
+}
+
+.contactDivider {
+  padding-top: 8px;
+  border-top: 1px solid rgb(243, 244, 246);
+}
+
+.whatsappInfo {
+  font-size: 14px;
+  color: rgb(107, 114, 128);
+  margin: 0 0 8px 0;
+}
+
+.whatsappButton {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgb(187, 247, 208);
+  color: rgb(22, 163, 74);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.whatsappButton:hover {
+  background-color: rgb(240, 253, 244);
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: rgb(249, 250, 251);
+  border-radius: 8px;
+}
+
+.serviceIcon {
+  width: 20px;
+  height: 20px;
+  color: rgb(234, 88, 12);
+  flex-shrink: 0;
+}
+
+.serviceInfo {
+  flex: 1;
+}
+
+.serviceName {
+  font-weight: 500;
+  color: rgb(31, 41, 55);
+  margin: 0 0 2px 0;
+  font-size: 16px;
+}
+
+.serviceTime {
+  font-size: 14px;
+  color: rgb(75, 85, 99);
+  margin: 0;
+}
+
+.directionsButton {
+  width: 100%;
+  background-color: rgb(37, 99, 235);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.directionsButton:hover {
+  background-color: rgb(29, 78, 216);
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

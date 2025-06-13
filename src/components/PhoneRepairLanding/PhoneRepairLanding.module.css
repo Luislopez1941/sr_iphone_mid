@@ -1,0 +1,9 @@
+/* Main Landing Page Container */
+.container {
+  min-height: 100vh;
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
+  color: rgb(31, 41, 55);
+}

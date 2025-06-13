@@ -1,0 +1,504 @@
+/* Footer - Futuristic Design */
+.footer {
+  background: linear-gradient(180deg, #0f172a 0%, #020617 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3b82f6,
+    #06b6d4,
+    transparent
+  );
+}
+
+.backgroundEffects {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.gradientOrb1 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.08) 0%,
+    rgba(59, 130, 246, 0.02) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.gradientOrb2 {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.06) 0%,
+    rgba(6, 182, 212, 0.01) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 24px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main Content */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+/* Brand Section */
+.brandSection {
+  text-align: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logoIcon::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: inherit;
+  border-radius: 14px;
+  filter: blur(16px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.logoIconSvg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #cbd5e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.brandDescription {
+  color: rgba(203, 213, 225, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto 32px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.socialButton {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.socialButton:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.socialButton:hover .socialIcon {
+  color: #60a5fa;
+}
+
+/* Links Section */
+.linksSection {
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  transform: translateX(-50%);
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkItem {
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(203, 213, 225, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.link:hover {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.05);
+  transform: translateX(4px);
+}
+
+.linkIcon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+/* Contact Section */
+.contactSection {
+  text-align: center;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+}
+
+.contactItem:hover {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.contactIcon {
+  width: 18px;
+  height: 18px;
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+.contactText {
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+}
+
+.ctaButton:hover::before {
+  opacity: 1;
+}
+
+.ctaButton span,
+.ctaIcon {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Features Strip */
+.featuresStrip {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.featureIcon {
+  width: 20px;
+  height: 20px;
+  color: #60a5fa;
+}
+
+.featureText {
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Bottom Section */
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyrightText {
+  color: rgba(148, 163, 184, 0.8);
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.legalText {
+  color: rgba(100, 116, 139, 0.6);
+  font-size: 12px;
+  margin: 0;
+}
+
+.scrollTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(203, 213, 225, 0.8);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.scrollTop:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.scrollTopIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    padding: 100px 32px 50px;
+  }
+
+  .mainContent {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 64px;
+  }
+
+  .brandSection {
+    text-align: left;
+  }
+
+  .logoContainer {
+    justify-content: flex-start;
+  }
+
+  .socialLinks {
+    justify-content: flex-start;
+  }
+
+  .linksSection,
+  .contactSection {
+    text-align: left;
+  }
+
+  .sectionTitle::after {
+    left: 0;
+    transform: none;
+  }
+
+  .link {
+    justify-content: flex-start;
+  }
+
+  .contactItem {
+    justify-content: flex-start;
+  }
+
+  .ctaButton {
+    margin: 0;
+  }
+
+  .featuresStrip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bottomSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featuresStrip {
+    gap: 32px;
+  }
+
+  .brandDescription {
+    max-width: none;
+  }
+}

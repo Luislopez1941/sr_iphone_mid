@@ -1,0 +1,248 @@
+/* Services Section - Futuristic Design */
+.section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #111827 0%, #0f172a 50%, #111827 100%);
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.accessoriesHeader {
+  margin-top: 120px;
+}
+
+.title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.title,
+.titleHighlight {
+  background: linear-gradient(135deg, #ffffff, #cbd5e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 18px;
+  color: rgba(203, 213, 225, 0.8);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.serviceCard {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+  group: hover;
+}
+
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05),
+    rgba(6, 182, 212, 0.02)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 32px 64px rgba(59, 130, 246, 0.2);
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.featuredCard {
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.serviceContent {
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.popularBadge {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.iconContainer {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.repairIcon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.accessoryIcon {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.iconContainer::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: inherit;
+  border-radius: 22px;
+  filter: blur(20px);
+  opacity: 0.3;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.serviceCard:hover .iconContainer::after {
+  opacity: 0.6;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.serviceTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.serviceDescription {
+  color: rgba(203, 213, 225, 0.8);
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.priceBadge {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.priceBadge:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.cta {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+}
+
+.ctaButton:hover::before {
+  opacity: 1;
+}
+
+.ctaButton span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

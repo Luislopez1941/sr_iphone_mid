@@ -1,0 +1,95 @@
+/* Call Button - Futuristic Design */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 16px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+}
+
+.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.4);
+}
+
+.primary:hover::before {
+  opacity: 1;
+}
+
+.outline {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+.ghost {
+  background: transparent;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.ghost:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.sm {
+  padding: 10px 20px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.default {
+  padding: 14px 28px;
+  font-size: 16px;
+  height: 48px;
+}
+
+.lg {
+  padding: 18px 36px;
+  font-size: 18px;
+  height: 56px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure text is above overlay */
+.button > span {
+  position: relative;
+  z-index: 1;
+}

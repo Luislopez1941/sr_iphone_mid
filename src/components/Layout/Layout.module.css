@@ -1,0 +1,130 @@
+/* Layout Styles - Futuristic Design */
+.layout {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a0f19 0%, #02060e 50%, #0a0f19 100%);
+  color: white;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main {
+  padding-top: 72px; /* Account for fixed header */
+  position: relative;
+  z-index: 1;
+}
+
+/* Ambient Background Effects */
+.ambientEffects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientOrb1 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.gradientOrb2 {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.12) 0%,
+    rgba(6, 182, 212, 0.04) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+.gradientOrb3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.08) 0%,
+    rgba(99, 102, 241, 0.02) 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 10s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+/* Global scrollbar styling */
+:global(::-webkit-scrollbar) {
+  width: 8px;
+}
+
+:global(::-webkit-scrollbar-track) {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+:global(::-webkit-scrollbar-thumb) {
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+  border-radius: 10px;
+}
+
+:global(::-webkit-scrollbar-thumb:hover) {
+  background: linear-gradient(180deg, #2563eb, #1e40af);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .main {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gradientOrb1 {
+    width: 600px;
+    height: 600px;
+  }
+
+  .gradientOrb2 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .gradientOrb3 {
+    width: 700px;
+    height: 700px;
+  }
+}
