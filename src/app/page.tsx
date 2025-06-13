@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { RootPage } from "@/pages/RootPage";
+import RootPage from "@/pages/RootPage";
 
 export default function Home() {
   return (
