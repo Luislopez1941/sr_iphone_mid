@@ -30,25 +30,25 @@ const repairServices: RepairService[] = [
     icon: Smartphone,
     title: "Reparación de Pantallas",
     description: "Pantallas rotas, táctil dañado, LCD o OLED",
-    price: "Desde $50",
+    price: "Desde $499",
   },
   {
     icon: Battery,
     title: "Cambio de Batería",
     description: "Batería agotada, no carga, se descarga rápido",
-    price: "Desde $35",
+    price: "Desde $499",
   },
   {
     icon: Zap,
     title: "Problemas de Carga",
     description: "Puerto de carga dañado, no carga, cable suelto",
-    price: "Desde $40",
+    price: "Desde $499",
   },
   {
     icon: Monitor,
     title: "Cámara y Audio",
     description: "Cámara borrosa, micrófono, altavoces",
-    price: "Desde $45",
+    price: "Desde $499",
   },
 ];
 
@@ -80,7 +80,7 @@ const accessories: Accessory[] = [
   },
 ];
 
-export const ServicesSection: React.FC = () => {
+export const  ServicesSection: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>

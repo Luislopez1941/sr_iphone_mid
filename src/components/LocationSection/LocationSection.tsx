@@ -23,9 +23,9 @@ interface Service {
 }
 
 const businessHours: BusinessHour[] = [
-  { day: "Lunes - Viernes", hours: "9:00 AM - 8:00 PM" },
-  { day: "Sábados", hours: "9:00 AM - 6:00 PM" },
-  { day: "Domingos", hours: "10:00 AM - 4:00 PM" },
+  { day: "Lunes - Viernes", hours: "9:00 AM - 9:00 PM" },
+  { day: "Sábados", hours: "10:00 AM - 8:00 PM" },
+  { day: "Domingos", hours: "10:00 AM - 8:00 PM" },
 ];
 
 const services: Service[] = [
@@ -43,7 +43,7 @@ export const LocationSection: React.FC = () => {
 
   const handleDirectionsClick = () => {
     const address = encodeURIComponent(
-      "Av. Principal 1234, Centro, Ciudad de México, CDMX 12345",
+      "Calle 19 #256 x 34 san Vicente Chuburna",
     );
     window.open(`https://maps.google.com/?q=${address}`, "_blank");
   };
@@ -63,17 +63,16 @@ export const LocationSection: React.FC = () => {
         <div className={styles.content}>
           {/* Map placeholder */}
           <div className={styles.mapContainer}>
-            <div className={styles.mapPlaceholder}>
-              <div className={styles.mapContent}>
-                <MapPin className={styles.mapIcon} />
-                <div>
-                  <p className={styles.mapTitle}>Mapa interactivo</p>
-                  <p className={styles.mapSubtitle}>
-                    Próximamente con ubicación exacta
-                  </p>
-                </div>
-              </div>
+            <div className={styles.mapWrapper}>
+              <iframe
+                className={styles.mapIframe}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.308742423828!2d-89.60136332396167!3d20.994600685189404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567132573cefdd%3A0x99c0ef494ac86884!2sC.%2019%20256%2C%20San%20Miguel%2C%2097140%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1718293926844!5m2!1ses!2smx"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
+
 
             {/* Address overlay */}
             <div className={styles.addressOverlay}>
@@ -82,9 +81,9 @@ export const LocationSection: React.FC = () => {
                 <div className={styles.addressInfo}>
                   <h3 className={styles.addressTitle}>Sr iPhone Mid</h3>
                   <p className={styles.addressText}>
-                    Av. Principal 1234, Centro
+                    Calle 19 #256 x 34 san Vicente Chuburna
                     <br />
-                    Ciudad de México, CDMX 12345
+                    Mérida, México
                   </p>
                 </div>
               </div>

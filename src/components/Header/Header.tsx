@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, Zap } from "lucide-react";
 import styles from "./Header.module.css";
+import Image from "next/image";
+import Logo from '../../assets/logo.png'
 
 interface HeaderProps {
   onCallClick?: () => void;
@@ -40,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ onCallClick }) => {
         {/* Logo */}
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Zap className={styles.logoIconSvg} />
+            <Image src={Logo} alt="Company logo" width={70}  />
           </div>
           <span className={styles.logoText}>Sr iPhone</span>
         </div>
