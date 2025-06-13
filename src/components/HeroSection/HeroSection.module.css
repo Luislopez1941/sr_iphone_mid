@@ -67,7 +67,7 @@
 }
 
 .titleAccent {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background: linear-gradient(135deg, #0353e1, #06b6d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,7 +103,7 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #0353e1, #1d4ed8);
   border: none;
   color: white;
   padding: 18px 36px;
@@ -182,7 +182,7 @@
 .statNumber {
   font-size: 32px;
   font-weight: 700;
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background: linear-gradient(135deg, #0353e1, #06b6d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -242,7 +242,7 @@
 .featureIcon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  background: linear-gradient(135deg, #0353e1, #06b6d4);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -344,6 +344,14 @@
     flex-direction: row;
   }
 }
+
+@media (max-width: 1024px) {
+  .container {
+  margin-top: 50px;
+
+}
+}
+
 
 @media (min-width: 768px) {
   .container {
