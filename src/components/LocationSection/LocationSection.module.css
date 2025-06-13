@@ -306,7 +306,7 @@
 
 .directionsButton {
   width: 100%;
-  background-color: rgb(37, 99, 235);
+  background-color: #0353e1;
   color: white;
   padding: 16px 32px;
   border: none;
@@ -322,7 +322,7 @@
 }
 
 .directionsButton:hover {
-  background-color: rgb(29, 78, 216);
+  background-color: #0353e1;
 }
 
 .buttonIcon {
