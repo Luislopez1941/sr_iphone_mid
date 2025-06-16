@@ -126,7 +126,7 @@ export const LocationSection: React.FC = () => {
                   </p>
                   <CallButton
                     className={styles.contactButton}
-                    phoneNumber="tel:+9997979776"
+                    phoneNumber="tel:9997979776"
                   />
                   <div className={styles.contactDivider}>
                     <p className={styles.whatsappInfo}>

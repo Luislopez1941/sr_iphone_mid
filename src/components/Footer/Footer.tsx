@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
     {
       icon: Phone,
       text: "(999) 797-9776",
-      action: () => (window.location.href = "tel:+9997979776"),
+      action: () => (window.location.href = "tel:9997979776"),
     },
     {
       icon: Mail,

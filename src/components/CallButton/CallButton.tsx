@@ -11,7 +11,7 @@ interface CallButtonProps {
 }
 
 export const CallButton: React.FC<CallButtonProps> = ({
-  phoneNumber = "tel:+1234567890",
+  phoneNumber = "tel:9997979776",
   className = "",
   variant = "primary",
   size = "default",
