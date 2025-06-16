@@ -38,7 +38,7 @@ export const LocationSection: React.FC = () => {
     const message = encodeURIComponent(
       "Hola! Necesito información sobre reparaciones",
     );
-    window.open(`https://wa.me/5512345678?text=${message}`, "_blank");
+    window.open(`https://wa.me/5219997979776?text=${message}`, "_blank");
   };
 
   const handleDirectionsClick = () => {
@@ -126,7 +126,7 @@ export const LocationSection: React.FC = () => {
                   </p>
                   <CallButton
                     className={styles.contactButton}
-                    phoneNumber="tel:+5512345678"
+                    phoneNumber="tel:+9997979776"
                   />
                   <div className={styles.contactDivider}>
                     <p className={styles.whatsappInfo}>

@@ -52,15 +52,15 @@ export const Footer: React.FC = () => {
   const businessInfo = [
     {
       icon: Phone,
-      text: "(55) 1234-5678",
-      action: () => (window.location.href = "tel:+5512345678"),
+      text: "(999) 797-9776",
+      action: () => (window.location.href = "tel:+9997979776"),
     },
     {
       icon: Mail,
       text: "info@sriphone.com",
       action: () => (window.location.href = "mailto:info@sriphone.com"),
     },
-    { icon: MapPin, text: "Av. Principal 1234, Centro", action: () => {} },
+    { icon: MapPin, text: "Calle 19 #256 x 34 san Vicente Chuburna", action: () => {} },
     { icon: Clock, text: "Lun-Vie: 9AM-8PM", action: () => {} },
   ];
 

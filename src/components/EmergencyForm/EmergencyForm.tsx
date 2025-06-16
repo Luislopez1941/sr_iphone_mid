@@ -24,23 +24,44 @@ export const EmergencyForm: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Emergency repair request:", formData);
-    setIsSubmitted(true);
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        phone: "",
-        address: "",
-        deviceType: "",
-        problem: "",
-        urgency: "",
-      });
-    }, 3000);
-  };
+  const { name, phone, address, deviceType, problem, urgency } = formData;
+
+  const message = `
+🛠 *Nueva Solicitud de Reparación de Emergencia* 🛠
+  
+👤 *Nombre:* ${name}
+📞 *Teléfono:* ${phone}
+📍 *Dirección:* ${address}
+📱 *Dispositivo:* ${deviceType}
+❗ *Problema:* ${problem}
+⚠️ *Urgencia:* ${urgency}
+  `.trim();
+
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "5219997979776";
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  setIsSubmitted(true);
+
+  setTimeout(() => {
+    setIsSubmitted(false);
+    setFormData({
+      name: "",
+      phone: "",
+      address: "",
+      deviceType: "",
+      problem: "",
+      urgency: "",
+    });
+  }, 3000);
+};
+
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
