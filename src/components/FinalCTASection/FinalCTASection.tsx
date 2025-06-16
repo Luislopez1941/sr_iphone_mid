@@ -3,14 +3,14 @@ import styles from "./FinalCTASection.module.css";
 
 export const FinalCTASection: React.FC = () => {
   const handleCallClick = () => {
-    window.location.href = "tel:+5512345678";
+    window.location.href = "tel:+9997979776";
   };
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
       "Hola! Necesito información sobre reparaciones",
     );
-    window.open(`https://wa.me/5512345678?text=${message}`, "_blank");
+    window.open(`https://wa.me/9997979776?text=${message}`, "_blank");
   };
 
   return (
